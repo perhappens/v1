@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+#download-btn, #cancel-btn {
+    background-color: #3897f0;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#download-btn:hover, #cancel-btn:hover {
+    background-color: #2e77c7;
+}
+
+#queue-container {
+    width: 600px;
+    height: 600px;
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#queue-header {
+    background-color: #3897f0;
+    color: white;
+    font-size: 18px;
+    text-align: left;
+}
+
+#queue-content {
+    padding: 10px;
+    overflow-y: auto;
+    height: calc(100% - 40px);
+}
+
+.queue-item {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.queue-item:last-child {
+    border-bottom: none;
+}
+
+#progress-container {
+    margin-top: 20px;
+    width: 100%;
+}
+
+#progress-bar {
+    width: 100%;
+    height: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #f3f3f3;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+#progress-bar progress {
+    width: 100%;
+    height: 100%;
+    border: none;
+    appearance: none;
+}
+
+#progress-bar progress::-webkit-progress-bar {
+    background-color: #f3f3f3;
+    border-radius: 10px;
+}
+
+#progress-bar progress::-webkit-progress-value {
+    background-color: #3897f0;
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+#progress-bar progress::-moz-progress-bar {
+    background-color: #3897f0;
+    border-radius: 10px;
+}
+
+#progress-text {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1e1e1e;
+        color: #dcdcdc;
+    }
+
+    #download-btn, #cancel-btn {
+        background-color: #444;
+    }
+
+    #download-btn:hover, #cancel-btn:hover {
+        background-color: #333;
+    }
+
+    #queue-container {
+        background-color: #333;
+        color: #dcdcdc;
+    }
+
+    #queue-header {
+        background-color: #444;
+    }
+
+    #progress-bar {
+        background-color: #333;
+    }
+
+    #progress-bar progress::-webkit-progress-bar {
+        background-color: #333;
+    }
+
+    #progress-text {
+        color: #ccc;
+    }
+}
